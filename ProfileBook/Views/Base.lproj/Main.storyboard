@@ -27,14 +27,16 @@
         <!--Users SignIn-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="ProfileBook" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="SignInViewController" customModule="ProfileBook" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZbV-Tg-EOh">
-                                <rect key="frame" x="48" y="586" width="329" height="56"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZbV-Tg-EOh">
+                                <rect key="frame" x="24" y="586" width="366" height="46"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="46" id="jNj-Bg-2QA"/>
+                                </constraints>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled" title="SIGN IN">
                                     <fontDescription key="titleFontDescription" type="system" pointSize="24"/>
@@ -45,21 +47,21 @@
                                     <segue destination="SQ4-fn-cBo" kind="show" id="xkn-cR-Ly5"/>
                                 </connections>
                             </button>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Login" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="5Vg-DA-vTh">
-                                <rect key="frame" x="48" y="226" width="329" height="34"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Login" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="5Vg-DA-vTh">
+                                <rect key="frame" x="24" y="208" width="366" height="34"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="EOd-it-LkB">
-                                <rect key="frame" x="48" y="321" width="329" height="34"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="EOd-it-LkB">
+                                <rect key="frame" x="24" y="266" width="366" height="34"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Cr6-O1-Hfc">
-                                <rect key="frame" x="136" y="684" width="142" height="59"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Cr6-O1-Hfc">
+                                <rect key="frame" x="24" y="656" width="366" height="46"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="46" id="AUM-kh-QRG"/>
+                                </constraints>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain">
                                     <attributedString key="attributedTitle">
@@ -79,6 +81,20 @@
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="ZbV-Tg-EOh" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="24" id="84K-Kv-cer"/>
+                            <constraint firstItem="5Vg-DA-vTh" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="24" id="BjK-Ls-j2R"/>
+                            <constraint firstItem="Cr6-O1-Hfc" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="24" id="GW7-uY-pg2"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="5Vg-DA-vTh" secondAttribute="trailing" constant="24" id="QTE-Gj-e0q"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Cr6-O1-Hfc" secondAttribute="trailing" constant="24" id="Zxl-st-P1J"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="ZbV-Tg-EOh" secondAttribute="trailing" constant="24" id="dho-FT-LHL"/>
+                            <constraint firstItem="EOd-it-LkB" firstAttribute="top" secondItem="5Vg-DA-vTh" secondAttribute="bottom" constant="24" id="mzW-jv-ROp"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="EOd-it-LkB" secondAttribute="trailing" constant="24" id="tz1-v4-eRy"/>
+                            <constraint firstItem="EOd-it-LkB" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="24" id="u4G-Yc-z9e"/>
+                            <constraint firstItem="ZbV-Tg-EOh" firstAttribute="top" secondItem="EOd-it-LkB" secondAttribute="bottom" constant="286" id="vbc-tc-LGP"/>
+                            <constraint firstItem="Cr6-O1-Hfc" firstAttribute="top" secondItem="ZbV-Tg-EOh" secondAttribute="bottom" constant="24" id="w4f-qs-bjc"/>
+                            <constraint firstItem="5Vg-DA-vTh" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="120" id="yFi-RS-c7N"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Users SignIn" id="83Y-Zi-4uv"/>
                 </viewController>
@@ -89,7 +105,7 @@
         <!--Users SignUp-->
         <scene sceneID="f9I-OD-ZoA">
             <objects>
-                <viewController id="D9n-48-CdU" sceneMemberID="viewController">
+                <viewController id="D9n-48-CdU" customClass="SignUpViewController" customModule="ProfileBook" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Cve-8O-e9f">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -103,6 +119,9 @@
                                     <color key="baseForegroundColor" systemColor="labelColor"/>
                                     <color key="baseBackgroundColor" systemColor="systemOrangeColor"/>
                                 </buttonConfiguration>
+                                <connections>
+                                    <action selector="updateUserInfo" destination="D9n-48-CdU" eventType="touchUpInside" id="oKa-7k-IGV"/>
+                                </connections>
                             </button>
                             <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Login" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="98V-Pu-C0M">
                                 <rect key="frame" x="43" y="226" width="329" height="34"/>
@@ -225,8 +244,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES"
-                                translatesAutoresizingMaskIntoConstraints="NO" id="1MI-98-5z3">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="1MI-98-5z3">
                                 <rect key="frame" x="45" y="580" width="324" height="268"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>

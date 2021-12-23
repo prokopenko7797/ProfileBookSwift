@@ -7,15 +7,26 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CE72138C27736F7400BE19B4 /* UserService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE72138B27736F7400BE19B4 /* UserService.swift */; };
+		CE8162EB2770C925001FFA07 /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE8162EA2770C925001FFA07 /* SignInViewController.swift */; };
+		CE8162ED2770C9B2001FFA07 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE8162EC2770C9B2001FFA07 /* SignUpViewController.swift */; };
+		CE879C922773D60C00A7E1B9 /* SQLite in Frameworks */ = {isa = PBXBuildFile; productRef = CE879C912773D60C00A7E1B9 /* SQLite */; };
+		CE879C942773D69700A7E1B9 /* SQLManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE879C932773D69700A7E1B9 /* SQLManager.swift */; };
 		CEB91AA9276DF22F00D7ECDA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB91AA8276DF22F00D7ECDA /* AppDelegate.swift */; };
 		CEB91AAB276DF22F00D7ECDA /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB91AAA276DF22F00D7ECDA /* SceneDelegate.swift */; };
 		CEB91AAD276DF22F00D7ECDA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB91AAC276DF22F00D7ECDA /* ViewController.swift */; };
 		CEB91AB0276DF22F00D7ECDA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CEB91AAE276DF22F00D7ECDA /* Main.storyboard */; };
 		CEB91AB2276DF23000D7ECDA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CEB91AB1276DF23000D7ECDA /* Assets.xcassets */; };
 		CEB91AB5276DF23000D7ECDA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CEB91AB3276DF23000D7ECDA /* LaunchScreen.storyboard */; };
+		CEC976E22770703300F4269D /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEC976E12770703300F4269D /* UserModel.swift */; };
+		CEC976E92770729B00F4269D /* ProfileModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEC976E82770729B00F4269D /* ProfileModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		CE72138B27736F7400BE19B4 /* UserService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserService.swift; sourceTree = "<group>"; };
+		CE8162EA2770C925001FFA07 /* SignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
+		CE8162EC2770C9B2001FFA07 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
+		CE879C932773D69700A7E1B9 /* SQLManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SQLManager.swift; sourceTree = "<group>"; };
 		CEB91AA5276DF22F00D7ECDA /* ProfileBook.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ProfileBook.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CEB91AA8276DF22F00D7ECDA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CEB91AAA276DF22F00D7ECDA /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -24,6 +35,8 @@
 		CEB91AB1276DF23000D7ECDA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CEB91AB4276DF23000D7ECDA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CEB91AB6276DF23000D7ECDA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CEC976E12770703300F4269D /* UserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
+		CEC976E82770729B00F4269D /* ProfileModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,12 +44,39 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CE879C922773D60C00A7E1B9 /* SQLite in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		CE72138A27736EA700BE19B4 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				CE72138B27736F7400BE19B4 /* UserService.swift */,
+				CE879C932773D69700A7E1B9 /* SQLManager.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		CE8162E92770C8A1001FFA07 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				CE8162EA2770C925001FFA07 /* SignInViewController.swift */,
+				CE8162EC2770C9B2001FFA07 /* SignUpViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		CE8162EE2770C9E6001FFA07 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				CEB91AAE276DF22F00D7ECDA /* Main.storyboard */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 		CEB91A9C276DF22F00D7ECDA = {
 			isa = PBXGroup;
 			children = (
@@ -56,15 +96,27 @@
 		CEB91AA7276DF22F00D7ECDA /* ProfileBook */ = {
 			isa = PBXGroup;
 			children = (
+				CE72138A27736EA700BE19B4 /* Services */,
+				CE8162EE2770C9E6001FFA07 /* Views */,
+				CE8162E92770C8A1001FFA07 /* ViewControllers */,
+				CEC976E027706FDB00F4269D /* Models */,
 				CEB91AA8276DF22F00D7ECDA /* AppDelegate.swift */,
 				CEB91AAA276DF22F00D7ECDA /* SceneDelegate.swift */,
 				CEB91AAC276DF22F00D7ECDA /* ViewController.swift */,
-				CEB91AAE276DF22F00D7ECDA /* Main.storyboard */,
 				CEB91AB1276DF23000D7ECDA /* Assets.xcassets */,
 				CEB91AB3276DF23000D7ECDA /* LaunchScreen.storyboard */,
 				CEB91AB6276DF23000D7ECDA /* Info.plist */,
 			);
 			path = ProfileBook;
+			sourceTree = "<group>";
+		};
+		CEC976E027706FDB00F4269D /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				CEC976E12770703300F4269D /* UserModel.swift */,
+				CEC976E82770729B00F4269D /* ProfileModel.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -83,6 +135,9 @@
 			dependencies = (
 			);
 			name = ProfileBook;
+			packageProductDependencies = (
+				CE879C912773D60C00A7E1B9 /* SQLite */,
+			);
 			productName = ProfileBook;
 			productReference = CEB91AA5276DF22F00D7ECDA /* ProfileBook.app */;
 			productType = "com.apple.product-type.application";
@@ -111,6 +166,9 @@
 				Base,
 			);
 			mainGroup = CEB91A9C276DF22F00D7ECDA;
+			packageReferences = (
+				CE879C902773D60C00A7E1B9 /* XCRemoteSwiftPackageReference "SQLite.swift" */,
+			);
 			productRefGroup = CEB91AA6276DF22F00D7ECDA /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -138,7 +196,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CE72138C27736F7400BE19B4 /* UserService.swift in Sources */,
+				CEC976E22770703300F4269D /* UserModel.swift in Sources */,
+				CE8162ED2770C9B2001FFA07 /* SignUpViewController.swift in Sources */,
+				CEC976E92770729B00F4269D /* ProfileModel.swift in Sources */,
+				CE8162EB2770C925001FFA07 /* SignInViewController.swift in Sources */,
 				CEB91AAD276DF22F00D7ECDA /* ViewController.swift in Sources */,
+				CE879C942773D69700A7E1B9 /* SQLManager.swift in Sources */,
 				CEB91AA9276DF22F00D7ECDA /* AppDelegate.swift in Sources */,
 				CEB91AAB276DF22F00D7ECDA /* SceneDelegate.swift in Sources */,
 			);
@@ -358,6 +422,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		CE879C902773D60C00A7E1B9 /* XCRemoteSwiftPackageReference "SQLite.swift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/stephencelis/SQLite.swift.git";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		CE879C912773D60C00A7E1B9 /* SQLite */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = CE879C902773D60C00A7E1B9 /* XCRemoteSwiftPackageReference "SQLite.swift" */;
+			productName = SQLite;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = CEB91A9D276DF22F00D7ECDA /* Project object */;
 }
