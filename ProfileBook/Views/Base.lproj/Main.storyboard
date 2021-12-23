@@ -27,7 +27,7 @@
         <!--Users SignIn-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="SignInViewController" customModule="ProfileBook" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="SignIn" id="BYZ-38-t0r" customClass="SignInViewController" customModule="ProfileBook" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -97,6 +97,10 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Users SignIn" id="83Y-Zi-4uv"/>
+                    <connections>
+                        <outlet property="loginTextField" destination="5Vg-DA-vTh" id="gv0-PR-8uT"/>
+                        <outlet property="passwordTextField" destination="EOd-it-LkB" id="w91-kb-V3O"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -146,6 +150,11 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <navigationItem key="navigationItem" title="Users SignUp" id="CB5-vg-rtm"/>
+                    <connections>
+                        <outlet property="confirmPasswordTextField" destination="g2o-oP-gdI" id="Z0d-pa-hhd"/>
+                        <outlet property="loginTextField" destination="98V-Pu-C0M" id="KGb-Bw-L2G"/>
+                        <outlet property="passwordTextField" destination="fh6-4S-GzD" id="a4g-mo-BrO"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rli-rT-Rqp" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

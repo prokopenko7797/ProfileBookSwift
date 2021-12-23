@@ -10,9 +10,18 @@ import UIKit
 
 class SignInViewController: UIViewController {
 
+    @IBOutlet weak var passwordTextField: UITextField!
+    @IBOutlet weak var loginTextField: UITextField!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        NotificationCenter.default.addObserver(self, selector: #selector(onGetNotification(_:)), name: Notification.Name("login"), object: nil)
+    }
+    
+    @objc func onGetNotification(_ notification: Notification)
+    {
+        let text = notification.object as! String?
+        loginTextField.text = text
     }
 
 }
