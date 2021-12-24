@@ -114,7 +114,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bd2-lS-nFH">
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bd2-lS-nFH">
                                 <rect key="frame" x="43" y="586" width="329" height="56"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
@@ -132,6 +132,9 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <action selector="onTextChanged:" destination="D9n-48-CdU" eventType="editingChanged" id="43F-iz-RwU"/>
+                                </connections>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="fh6-4S-GzD">
                                 <rect key="frame" x="43" y="321" width="329" height="34"/>
@@ -154,6 +157,7 @@
                         <outlet property="confirmPasswordTextField" destination="g2o-oP-gdI" id="Z0d-pa-hhd"/>
                         <outlet property="loginTextField" destination="98V-Pu-C0M" id="KGb-Bw-L2G"/>
                         <outlet property="passwordTextField" destination="fh6-4S-GzD" id="a4g-mo-BrO"/>
+                        <outlet property="signUpButton" destination="bd2-lS-nFH" id="S6x-SW-346"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rli-rT-Rqp" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

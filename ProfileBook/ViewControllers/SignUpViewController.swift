@@ -16,13 +16,15 @@ class SignUpViewController: UIViewController {
     
     @IBOutlet weak var confirmPasswordTextField: UITextField!
     
+    @IBOutlet weak var signUpButton: UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
     }
 
     @IBAction func updateUserInfo() {
-    
+        
         if loginTextField.text != nil || (passwordTextField.text != nil) || (confirmPasswordTextField.text != nil)
         {
             let result = UserService.shared.registrate(loginTextField.text!, passwordTextField.text!)
@@ -35,8 +37,25 @@ class SignUpViewController: UIViewController {
                 navigationController?.popToRootViewController(animated: true)
             }
         }
+        else
+        {
+            let alert = UIAlertController(title: "Alert", message: "Message", preferredStyle: UIAlertController.Style.alert)
+            alert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
+            self.present(alert, animated: true, completion: nil)
+        }
         
     }
     
-
+    @IBAction func onTextChanged(_ sender: Any)
+    {
+        if loginTextField.text!.isEmpty || passwordTextField.text!.isEmpty || confirmPasswordTextField.text!.isEmpty
+        {
+            signUpButton.isEnabled = false;
+        }
+        else
+        {
+            signUpButton.isEnabled = true
+        }
+    }
+    
 }
