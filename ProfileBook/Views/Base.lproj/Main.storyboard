@@ -8,10 +8,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Navigation Controller-->
+        <!--Login Navigation Controller-->
         <scene sceneID="1YK-zA-IBI">
             <objects>
-                <navigationController id="IBj-SY-KPl" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="RootNavigationController" id="IBj-SY-KPl" customClass="LoginNavigationController" customModule="ProfileBook" customModuleProvider="target" sceneMemberID="viewController">
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="FB4-82-TOu">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -45,7 +45,6 @@
                                 </buttonConfiguration>
                                 <connections>
                                     <action selector="signInButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="0eo-Oj-j1m"/>
-                                    <segue destination="SQ4-fn-cBo" kind="show" id="xkn-cR-Ly5"/>
                                 </connections>
                             </button>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Login" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="5Vg-DA-vTh">
@@ -108,6 +107,7 @@
                         <outlet property="loginTextField" destination="5Vg-DA-vTh" id="gv0-PR-8uT"/>
                         <outlet property="passwordTextField" destination="EOd-it-LkB" id="w91-kb-V3O"/>
                         <outlet property="signInButton" destination="ZbV-Tg-EOh" id="UQ9-XD-JhU"/>
+                        <segue destination="SQ4-fn-cBo" kind="show" identifier="ToMainList" id="B7V-0Z-R0G"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -132,7 +132,7 @@
                                     <color key="baseBackgroundColor" systemColor="systemOrangeColor"/>
                                 </buttonConfiguration>
                                 <connections>
-                                    <action selector="updateUserInfo" destination="D9n-48-CdU" eventType="touchUpInside" id="oKa-7k-IGV"/>
+                                    <action selector="signUpButtonTapped" destination="D9n-48-CdU" eventType="touchUpInside" id="oKa-7k-IGV"/>
                                 </connections>
                             </button>
                             <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Login" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="98V-Pu-C0M">
@@ -288,10 +288,10 @@
             </objects>
             <point key="canvasLocation" x="2976.811594202899" y="-243.08035714285714"/>
         </scene>
-        <!--Navigation Controller-->
+        <!--Autorized Navigation Controller-->
         <scene sceneID="j4R-Cc-H3Y">
             <objects>
-                <navigationController modalPresentationStyle="fullScreen" toolbarHidden="NO" id="SQ4-fn-cBo" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="AutorizedNavigationController" modalPresentationStyle="fullScreen" toolbarHidden="NO" id="SQ4-fn-cBo" customClass="AutorizedNavigationController" sceneMemberID="viewController">
                     <navigationItem key="navigationItem" id="5Ok-BG-M2d"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="Ajg-s3-CkQ">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>

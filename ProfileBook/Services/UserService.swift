@@ -78,6 +78,8 @@ class UserService {
             {
                 if user[emailExp] == email && user[passwordExp] == password
                 {
+                    UserDefaults.standard.set(true, forKey: "isAutorized")
+                    UserDefaults.standard.set(user[idExp], forKey: "userId")
                     result = true
                 }
             }

@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		CE064C8F2775FCC000591F43 /* Validator.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE064C8E2775FCC000591F43 /* Validator.swift */; };
+		CE2767C32779F1E70009C45C /* LoginNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE2767C22779F1E70009C45C /* LoginNavigationController.swift */; };
+		CE2767C52779FE8F0009C45C /* AutorizedNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE2767C42779FE8F0009C45C /* AutorizedNavigationController.swift */; };
 		CE72138C27736F7400BE19B4 /* UserService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE72138B27736F7400BE19B4 /* UserService.swift */; };
 		CE8162EB2770C925001FFA07 /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE8162EA2770C925001FFA07 /* SignInViewController.swift */; };
 		CE8162ED2770C9B2001FFA07 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE8162EC2770C9B2001FFA07 /* SignUpViewController.swift */; };
@@ -25,6 +27,8 @@
 
 /* Begin PBXFileReference section */
 		CE064C8E2775FCC000591F43 /* Validator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Validator.swift; sourceTree = "<group>"; };
+		CE2767C22779F1E70009C45C /* LoginNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginNavigationController.swift; sourceTree = "<group>"; };
+		CE2767C42779FE8F0009C45C /* AutorizedNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AutorizedNavigationController.swift; sourceTree = "<group>"; };
 		CE72138B27736F7400BE19B4 /* UserService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserService.swift; sourceTree = "<group>"; };
 		CE8162EA2770C925001FFA07 /* SignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
 		CE8162EC2770C9B2001FFA07 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
@@ -73,8 +77,10 @@
 		CE8162E92770C8A1001FFA07 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				CE2767C22779F1E70009C45C /* LoginNavigationController.swift */,
 				CE8162EA2770C925001FFA07 /* SignInViewController.swift */,
 				CE8162EC2770C9B2001FFA07 /* SignUpViewController.swift */,
+				CE2767C42779FE8F0009C45C /* AutorizedNavigationController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -208,8 +214,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				CE72138C27736F7400BE19B4 /* UserService.swift in Sources */,
+				CE2767C52779FE8F0009C45C /* AutorizedNavigationController.swift in Sources */,
 				CEC976E22770703300F4269D /* UserModel.swift in Sources */,
 				CE064C8F2775FCC000591F43 /* Validator.swift in Sources */,
+				CE2767C32779F1E70009C45C /* LoginNavigationController.swift in Sources */,
 				CE8162ED2770C9B2001FFA07 /* SignUpViewController.swift in Sources */,
 				CEC976E92770729B00F4269D /* ProfileModel.swift in Sources */,
 				CE8162EB2770C925001FFA07 /* SignInViewController.swift in Sources */,

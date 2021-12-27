@@ -22,7 +22,27 @@ class SignInViewController: UIViewController {
     
     @IBAction func signInButtonTapped(_ sender: Any)
     {
+        var result = false
         
+        if  Validator.isValidEmail(loginTextField.text!)
+        {
+        
+            result = UserService.shared.autorize(loginTextField.text!, passwordTextField.text!)
+            print(result)
+            
+            if result
+            {
+                performSegue(withIdentifier: "ToMainList", sender: nil)
+            }
+        }
+        else
+        {
+            let alert = UIAlertController(title: "Error", message: "Wrong email", preferredStyle: UIAlertController.Style.alert)
+            alert.addAction(UIAlertAction(title: "Back", style: .cancel, handler: nil))
+            self.present(alert, animated: true, completion: nil)
+        }
+        
+        print(result)
     }
     
     @objc func onGetNotification(_ notification: Notification)

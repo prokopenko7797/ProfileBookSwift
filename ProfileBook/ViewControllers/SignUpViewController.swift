@@ -23,7 +23,7 @@ class SignUpViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
 
-    @IBAction func updateUserInfo() {
+    @IBAction func signUpButtonTapped() {
         
         if  Validator.isValidEmail(loginTextField.text!)
         {
@@ -35,7 +35,6 @@ class SignUpViewController: UIViewController {
                 {
                 
                     let result = UserService.shared.registrate(loginTextField.text!, passwordTextField.text!)
-                    print(result)
                     
                     if result
                     {
@@ -65,7 +64,6 @@ class SignUpViewController: UIViewController {
             alert.addAction(UIAlertAction(title: "Back", style: .cancel, handler: nil))
             self.present(alert, animated: true, completion: nil)
         }
-        
     }
     
     @IBAction func onTextChanged(_ sender: Any)
