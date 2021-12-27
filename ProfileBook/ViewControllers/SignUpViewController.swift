@@ -25,22 +25,44 @@ class SignUpViewController: UIViewController {
 
     @IBAction func updateUserInfo() {
         
-        if loginTextField.text != nil || (passwordTextField.text != nil) || (confirmPasswordTextField.text != nil)
+        if  Validator.isValidEmail(loginTextField.text!)
         {
-            let result = UserService.shared.registrate(loginTextField.text!, passwordTextField.text!)
-            print(result)
-            
-            if result
+        
+            if passwordTextField.text == confirmPasswordTextField.text
             {
-                NotificationCenter.default.post(name: Notification.Name("login"), object: loginTextField.text)
                 
-                navigationController?.popToRootViewController(animated: true)
+                if Validator.isValidPassword(passwordTextField.text!)
+                {
+                
+                    let result = UserService.shared.registrate(loginTextField.text!, passwordTextField.text!)
+                    print(result)
+                    
+                    if result
+                    {
+                        NotificationCenter.default.post(name: Notification.Name("login"), object: loginTextField.text)
+                        
+                        navigationController?.popToRootViewController(animated: true)
+                    }
+                }
+                else
+                {
+                    let alert = UIAlertController(title: "Error", message: "Password must be at least 4 and no mere than 16 and must contain at least one uppercase letter, one lowercase letter and one number.", preferredStyle: UIAlertController.Style.alert)
+                    alert.addAction(UIAlertAction(title: "Back", style: .cancel, handler: nil))
+                    self.present(alert, animated: true, completion: nil)
+                }
             }
+            else
+            {
+                let alert = UIAlertController(title: "Error", message: "Password mismatches", preferredStyle: UIAlertController.Style.alert)
+                alert.addAction(UIAlertAction(title: "Back", style: .cancel, handler: nil))
+                self.present(alert, animated: true, completion: nil)
+            }
+            
         }
         else
         {
-            let alert = UIAlertController(title: "Alert", message: "Message", preferredStyle: UIAlertController.Style.alert)
-            alert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
+            let alert = UIAlertController(title: "Error", message: "Wrong email", preferredStyle: UIAlertController.Style.alert)
+            alert.addAction(UIAlertAction(title: "Back", style: .cancel, handler: nil))
             self.present(alert, animated: true, completion: nil)
         }
         
@@ -48,14 +70,7 @@ class SignUpViewController: UIViewController {
     
     @IBAction func onTextChanged(_ sender: Any)
     {
-        if loginTextField.text!.isEmpty || passwordTextField.text!.isEmpty || confirmPasswordTextField.text!.isEmpty
-        {
-            signUpButton.isEnabled = false;
-        }
-        else
-        {
-            signUpButton.isEnabled = true
-        }
+        signUpButton.isEnabled = !(loginTextField.text!.isEmpty || passwordTextField.text!.isEmpty || confirmPasswordTextField.text!.isEmpty)
     }
     
 }

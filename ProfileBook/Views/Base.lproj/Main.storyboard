@@ -32,7 +32,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZbV-Tg-EOh">
+                            <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZbV-Tg-EOh">
                                 <rect key="frame" x="24" y="586" width="366" height="46"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="46" id="jNj-Bg-2QA"/>
@@ -44,6 +44,7 @@
                                     <color key="baseBackgroundColor" systemColor="systemOrangeColor"/>
                                 </buttonConfiguration>
                                 <connections>
+                                    <action selector="signInButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="0eo-Oj-j1m"/>
                                     <segue destination="SQ4-fn-cBo" kind="show" id="xkn-cR-Ly5"/>
                                 </connections>
                             </button>
@@ -51,11 +52,17 @@
                                 <rect key="frame" x="24" y="208" width="366" height="34"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <action selector="onTextChanged:" destination="BYZ-38-t0r" eventType="editingChanged" id="pKg-DI-MdV"/>
+                                </connections>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="EOd-it-LkB">
                                 <rect key="frame" x="24" y="266" width="366" height="34"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                                <connections>
+                                    <action selector="onTextChanged:" destination="BYZ-38-t0r" eventType="editingChanged" id="zRL-UG-boA"/>
+                                </connections>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Cr6-O1-Hfc">
                                 <rect key="frame" x="24" y="656" width="366" height="46"/>
@@ -100,6 +107,7 @@
                     <connections>
                         <outlet property="loginTextField" destination="5Vg-DA-vTh" id="gv0-PR-8uT"/>
                         <outlet property="passwordTextField" destination="EOd-it-LkB" id="w91-kb-V3O"/>
+                        <outlet property="signInButton" destination="ZbV-Tg-EOh" id="UQ9-XD-JhU"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -141,12 +149,18 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                                <connections>
+                                    <action selector="onTextChanged:" destination="D9n-48-CdU" eventType="editingChanged" id="Yp4-wL-OA9"/>
+                                </connections>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Confirm Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="g2o-oP-gdI">
                                 <rect key="frame" x="43" y="400" width="329" height="34"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                                <connections>
+                                    <action selector="onTextChanged:" destination="D9n-48-CdU" eventType="editingChanged" id="4Ob-Zd-quW"/>
+                                </connections>
                             </textField>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="7Yd-MF-ZEt"/>

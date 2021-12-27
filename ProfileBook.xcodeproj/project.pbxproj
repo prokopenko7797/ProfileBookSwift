@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CE064C8F2775FCC000591F43 /* Validator.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE064C8E2775FCC000591F43 /* Validator.swift */; };
 		CE72138C27736F7400BE19B4 /* UserService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE72138B27736F7400BE19B4 /* UserService.swift */; };
 		CE8162EB2770C925001FFA07 /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE8162EA2770C925001FFA07 /* SignInViewController.swift */; };
 		CE8162ED2770C9B2001FFA07 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE8162EC2770C9B2001FFA07 /* SignUpViewController.swift */; };
@@ -23,6 +24,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		CE064C8E2775FCC000591F43 /* Validator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Validator.swift; sourceTree = "<group>"; };
 		CE72138B27736F7400BE19B4 /* UserService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserService.swift; sourceTree = "<group>"; };
 		CE8162EA2770C925001FFA07 /* SignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
 		CE8162EC2770C9B2001FFA07 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
@@ -51,6 +53,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		CE064C8D2775FB3A00591F43 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				CE064C8E2775FCC000591F43 /* Validator.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
 		CE72138A27736EA700BE19B4 /* Services */ = {
 			isa = PBXGroup;
 			children = (
@@ -96,6 +106,7 @@
 		CEB91AA7276DF22F00D7ECDA /* ProfileBook */ = {
 			isa = PBXGroup;
 			children = (
+				CE064C8D2775FB3A00591F43 /* Helpers */,
 				CE72138A27736EA700BE19B4 /* Services */,
 				CE8162EE2770C9E6001FFA07 /* Views */,
 				CE8162E92770C8A1001FFA07 /* ViewControllers */,
@@ -198,6 +209,7 @@
 			files = (
 				CE72138C27736F7400BE19B4 /* UserService.swift in Sources */,
 				CEC976E22770703300F4269D /* UserModel.swift in Sources */,
+				CE064C8F2775FCC000591F43 /* Validator.swift in Sources */,
 				CE8162ED2770C9B2001FFA07 /* SignUpViewController.swift in Sources */,
 				CEC976E92770729B00F4269D /* ProfileModel.swift in Sources */,
 				CE8162EB2770C925001FFA07 /* SignInViewController.swift in Sources */,
