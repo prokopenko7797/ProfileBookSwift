@@ -237,8 +237,9 @@
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="M6I-uj-vaY">
-                                <rect key="frame" x="273" y="680" width="106" height="106"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="M6I-uj-vaY">
+                                <rect key="frame" x="272" y="678" width="106" height="106"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled" image="plus" catalog="system" cornerStyle="capsule"/>
                                 <connections>
@@ -250,9 +251,7 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstAttribute="bottom" secondItem="RxO-s5-0gd" secondAttribute="bottom" id="7RO-fy-EVp"/>
-                            <constraint firstItem="qR9-Bm-kdy" firstAttribute="bottom" secondItem="M6I-uj-vaY" secondAttribute="bottom" constant="20" id="9hR-4G-QCK"/>
                             <constraint firstItem="RxO-s5-0gd" firstAttribute="top" secondItem="qR9-Bm-kdy" secondAttribute="top" id="AG2-5K-izx"/>
-                            <constraint firstItem="qR9-Bm-kdy" firstAttribute="trailing" secondItem="M6I-uj-vaY" secondAttribute="trailing" constant="20" id="HqV-hq-dUu"/>
                             <constraint firstItem="RxO-s5-0gd" firstAttribute="trailing" secondItem="qR9-Bm-kdy" secondAttribute="trailing" id="cy1-N6-P6n"/>
                             <constraint firstItem="RxO-s5-0gd" firstAttribute="leading" secondItem="qR9-Bm-kdy" secondAttribute="leading" id="qDR-cA-BVU"/>
                         </constraints>

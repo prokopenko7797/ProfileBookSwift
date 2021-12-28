@@ -14,5 +14,9 @@ class MainListViewController: UIViewController
     {
         super.viewDidLoad()
         
+        self.navigationItem.rightBarButtonItems = [
+            UIBarButtonItem(image: UIImage(systemName: <#T##String#>), style: .done, target: self, action: nil),
+            UIBarButtonItem(image: UIImage(systemName: <#T##String#>), style: .done, target: self, action: nil)
+        ]
     }
 }
