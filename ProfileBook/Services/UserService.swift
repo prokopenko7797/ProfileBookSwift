@@ -90,4 +90,10 @@ class UserService {
         
         return result
     }
+    
+    func logOut()
+    {
+        UserDefaults.standard.set(false, forKey: "isAutorized")
+        UserDefaults.standard.removeObject(forKey: "userId")
+    }
 }

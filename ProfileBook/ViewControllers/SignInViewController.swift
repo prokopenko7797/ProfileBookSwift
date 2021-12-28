@@ -28,7 +28,6 @@ class SignInViewController: UIViewController {
         {
         
             result = UserService.shared.autorize(loginTextField.text!, passwordTextField.text!)
-            print(result)
             
             if result
             {
@@ -41,8 +40,6 @@ class SignInViewController: UIViewController {
             alert.addAction(UIAlertAction(title: "Back", style: .cancel, handler: nil))
             self.present(alert, animated: true, completion: nil)
         }
-        
-        print(result)
     }
     
     @objc func onGetNotification(_ notification: Notification)

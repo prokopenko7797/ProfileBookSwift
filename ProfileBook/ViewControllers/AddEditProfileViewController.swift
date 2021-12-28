@@ -1,15 +1,18 @@
 //
-//  MainListViewController.swift
+//  AddEditProfileViewController.swift
 //  ProfileBook
 //
-//  Created by User on 27.12.2021.
+//  Created by User on 28.12.2021.
 //
 
 import Foundation
 import UIKit
 
-class MainListViewController: UIViewController
+class AddEditProfileViewController: UIViewController
 {
+    @IBOutlet weak var nickNameTextField: UITextField!
+    @IBOutlet weak var nameTextField: UITextField!
+    @IBOutlet weak var imageView: UIImageView!
     override func viewDidLoad()
     {
         super.viewDidLoad()

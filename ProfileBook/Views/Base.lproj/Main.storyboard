@@ -63,13 +63,13 @@
                                     <action selector="onTextChanged:" destination="BYZ-38-t0r" eventType="editingChanged" id="zRL-UG-boA"/>
                                 </connections>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Cr6-O1-Hfc">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Cr6-O1-Hfc">
                                 <rect key="frame" x="24" y="656" width="366" height="46"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="46" id="AUM-kh-QRG"/>
                                 </constraints>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain">
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="Button">
                                     <attributedString key="attributedTitle">
                                         <fragment content="SIGN UP">
                                             <attributes>
@@ -79,7 +79,7 @@
                                             </attributes>
                                         </fragment>
                                     </attributedString>
-                                </buttonConfiguration>
+                                </state>
                                 <connections>
                                     <segue destination="D9n-48-CdU" kind="show" id="8qx-yF-hvr"/>
                                 </connections>
@@ -237,11 +237,18 @@
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7eZ-82-1c2">
+                                <rect key="frame" x="264" y="670" width="123" height="123"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="tintColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" image="ic_add" cornerStyle="capsule"/>
+                            </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="M6I-uj-vaY">
                                 <rect key="frame" x="272" y="678" width="106" height="106"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="filled" image="plus" catalog="system" cornerStyle="capsule"/>
+                                <buttonConfiguration key="configuration" style="filled" image="ic_add" cornerStyle="capsule"/>
                                 <connections>
                                     <segue destination="RR8-wV-wc6" kind="show" id="Zko-ax-I5L"/>
                                 </connections>
@@ -265,24 +272,24 @@
         <!--Add Profile-->
         <scene sceneID="zrt-fP-aLR">
             <objects>
-                <viewController id="RR8-wV-wc6" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="AddEditProfileViewController" id="RR8-wV-wc6" customClass="AddEditProfileViewController" customModule="ProfileBook" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="VzO-6k-kvi">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="LlO-dH-U5l">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="LlO-dH-U5l">
                                 <rect key="frame" x="87" y="118" width="240" height="224"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="LlO-dH-U5l" secondAttribute="height" multiplier="15:14" id="6m4-NR-81E"/>
+                                </constraints>
                             </imageView>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="NickName" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="K57-0N-COP">
-                                <rect key="frame" x="45" y="431" width="324" height="34"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="NickName" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="K57-0N-COP">
+                                <rect key="frame" x="24" y="431" width="366" height="34"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="n6p-7c-i66">
-                                <rect key="frame" x="45" y="502" width="324" height="34"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="n6p-7c-i66">
+                                <rect key="frame" x="24" y="502" width="366" height="34"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
@@ -296,8 +303,24 @@
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Agm-kG-bEs"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Agm-kG-bEs" firstAttribute="trailing" secondItem="K57-0N-COP" secondAttribute="trailing" constant="24" id="XIb-NY-28V"/>
+                            <constraint firstItem="Agm-kG-bEs" firstAttribute="trailing" secondItem="n6p-7c-i66" secondAttribute="trailing" constant="24" id="aBg-cu-KDg"/>
+                            <constraint firstItem="n6p-7c-i66" firstAttribute="top" secondItem="K57-0N-COP" secondAttribute="bottom" constant="37" id="bNZ-47-Cdg"/>
+                            <constraint firstItem="LlO-dH-U5l" firstAttribute="top" secondItem="Agm-kG-bEs" secondAttribute="top" constant="30" id="dGu-z5-8Dp"/>
+                            <constraint firstItem="LlO-dH-U5l" firstAttribute="leading" secondItem="Agm-kG-bEs" secondAttribute="leading" constant="87" id="fj3-IC-pcu"/>
+                            <constraint firstItem="Agm-kG-bEs" firstAttribute="trailing" secondItem="LlO-dH-U5l" secondAttribute="trailing" constant="87" id="hzK-IB-L6A"/>
+                            <constraint firstItem="K57-0N-COP" firstAttribute="leading" secondItem="Agm-kG-bEs" secondAttribute="leading" constant="24" id="pZY-Jj-9EL"/>
+                            <constraint firstItem="n6p-7c-i66" firstAttribute="leading" secondItem="Agm-kG-bEs" secondAttribute="leading" constant="24" id="qAw-Tv-pfr"/>
+                            <constraint firstItem="K57-0N-COP" firstAttribute="top" secondItem="LlO-dH-U5l" secondAttribute="bottom" constant="89" id="tkX-rp-nfu"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Add Profile" id="g00-5p-9QL"/>
+                    <connections>
+                        <outlet property="imageView" destination="LlO-dH-U5l" id="8Yt-hJ-QXm"/>
+                        <outlet property="nameTextField" destination="n6p-7c-i66" id="7KK-o3-Jei"/>
+                        <outlet property="nickNameTextField" destination="K57-0N-COP" id="UxH-Pg-hcE"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RoQ-DF-dnt" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -326,7 +349,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="plus" catalog="system" width="128" height="113"/>
+        <image name="ic_add" width="24" height="24"/>
         <systemColor name="labelColor">
             <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

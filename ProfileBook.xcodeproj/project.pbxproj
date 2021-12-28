@@ -24,6 +24,7 @@
 		CEB91AB5276DF23000D7ECDA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CEB91AB3276DF23000D7ECDA /* LaunchScreen.storyboard */; };
 		CEC976E22770703300F4269D /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEC976E12770703300F4269D /* UserModel.swift */; };
 		CEC976E92770729B00F4269D /* ProfileModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEC976E82770729B00F4269D /* ProfileModel.swift */; };
+		CEE7E465277B360900DA6E5D /* AddEditProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEE7E464277B360900DA6E5D /* AddEditProfileViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -45,6 +46,7 @@
 		CEB91AB6276DF23000D7ECDA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CEC976E12770703300F4269D /* UserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
 		CEC976E82770729B00F4269D /* ProfileModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileModel.swift; sourceTree = "<group>"; };
+		CEE7E464277B360900DA6E5D /* AddEditProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddEditProfileViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -84,6 +86,7 @@
 				CE8162EC2770C9B2001FFA07 /* SignUpViewController.swift */,
 				CE2767C42779FE8F0009C45C /* AutorizedNavigationController.swift */,
 				CE3C4DFD277A4F13009D8D0A /* MainListViewController.swift */,
+				CEE7E464277B360900DA6E5D /* AddEditProfileViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -226,6 +229,7 @@
 				CEC976E92770729B00F4269D /* ProfileModel.swift in Sources */,
 				CE8162EB2770C925001FFA07 /* SignInViewController.swift in Sources */,
 				CEB91AAD276DF22F00D7ECDA /* ViewController.swift in Sources */,
+				CEE7E465277B360900DA6E5D /* AddEditProfileViewController.swift in Sources */,
 				CE879C942773D69700A7E1B9 /* SQLManager.swift in Sources */,
 				CEB91AA9276DF22F00D7ECDA /* AppDelegate.swift in Sources */,
 				CEB91AAB276DF22F00D7ECDA /* SceneDelegate.swift in Sources */,
