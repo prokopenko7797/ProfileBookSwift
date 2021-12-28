@@ -12,18 +12,18 @@ class UserService {
     
     static let shared = UserService()
     
-    let users = Table("users")
-    
     fileprivate let idExp = Expression<Int>("index")
     fileprivate let emailExp = Expression<String>("email")
     fileprivate let passwordExp = Expression<String>("password")
+    
+    private let users = Table("users")
     
     init()
     {
         SQLManager.shared.connectDataBase()
     }
     
-    func createUserTable() {
+    private func createUserTable() {
         do {
             try SQLManager.shared.db.run(users.create(ifNotExists: true) { t in
                 t.column(idExp, primaryKey: .autoincrement)

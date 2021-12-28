@@ -17,19 +17,13 @@ class AddEditProfileViewController: UIViewController
     {
         super.viewDidLoad()
         
-        self.navigationItem.rightBarButtonItems = [
-            UIBarButtonItem(image: UIImage(named: "ic_settings"), style: .done, target: self, action: nil),
-            UIBarButtonItem(image: UIImage(named: "ic_exit_to_app"), style: .done, target: self, action: #selector(logOut))
-        ]
+        self.navigationItem.rightBarButtonItem = UIBarButtonItem(image: UIImage(named: "ic_save"), style: .done, target: self, action: #selector(saveProfile))
     }
     
-    @IBAction func logOut()
+    @IBAction func saveProfile()
     {
-        UserService.shared.logOut()
+        NotificationCenter.default.post(name: Notification.Name("save"), object: true)
         
-        let loginVC: LoginNavigationController = storyboard?.instantiateViewController(withIdentifier: "LoginNavigationController") as! LoginNavigationController
-        
-        self.view.window?.rootViewController = loginVC
-        self.view.window?.makeKeyAndVisible()
+        navigationController?.popToRootViewController(animated: true)
     }
 }

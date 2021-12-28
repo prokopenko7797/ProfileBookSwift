@@ -25,6 +25,7 @@
 		CEC976E22770703300F4269D /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEC976E12770703300F4269D /* UserModel.swift */; };
 		CEC976E92770729B00F4269D /* ProfileModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEC976E82770729B00F4269D /* ProfileModel.swift */; };
 		CEE7E465277B360900DA6E5D /* AddEditProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEE7E464277B360900DA6E5D /* AddEditProfileViewController.swift */; };
+		CEE7E467277B3A1C00DA6E5D /* ProfileService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEE7E466277B3A1C00DA6E5D /* ProfileService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -47,6 +48,7 @@
 		CEC976E12770703300F4269D /* UserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
 		CEC976E82770729B00F4269D /* ProfileModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileModel.swift; sourceTree = "<group>"; };
 		CEE7E464277B360900DA6E5D /* AddEditProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddEditProfileViewController.swift; sourceTree = "<group>"; };
+		CEE7E466277B3A1C00DA6E5D /* ProfileService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,6 +76,7 @@
 			children = (
 				CE72138B27736F7400BE19B4 /* UserService.swift */,
 				CE879C932773D69700A7E1B9 /* SQLManager.swift */,
+				CEE7E466277B3A1C00DA6E5D /* ProfileService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -233,6 +236,7 @@
 				CE879C942773D69700A7E1B9 /* SQLManager.swift in Sources */,
 				CEB91AA9276DF22F00D7ECDA /* AppDelegate.swift in Sources */,
 				CEB91AAB276DF22F00D7ECDA /* SceneDelegate.swift in Sources */,
+				CEE7E467277B3A1C00DA6E5D /* ProfileService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
