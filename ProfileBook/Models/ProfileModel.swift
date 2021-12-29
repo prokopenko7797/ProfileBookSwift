@@ -9,12 +9,17 @@ import Foundation
 
 struct ProfileModel {
     var id: Int = -1
-    var nickName: String
-    var name: String
-    var description: String
-    var imagePath: String
-    var userId: Int
-    var date: Date
+    var nickName: String = ""
+    var name: String = ""
+    var description: String = ""
+    var imagePath: String = ""
+    var userId: Int = -1
+    var date: Date = Date.now
+    
+    init()
+    {
+        
+    }
     
     init(_ id: Int, _ nickName: String, _ name: String, _ description: String, _ imagePath: String, _ userId: Int, _ date: Date){
      

@@ -10,9 +10,14 @@ import UIKit
 
 class AddEditProfileViewController: UIViewController
 {
+    
+    var profile = ProfileModel()
+    
+    @IBOutlet weak var imageButton: UIButton!
     @IBOutlet weak var nickNameTextField: UITextField!
     @IBOutlet weak var nameTextField: UITextField!
-    @IBOutlet weak var imageView: UIImageView!
+    @IBOutlet weak var descriptionTextView: UITextView!
+    
     override func viewDidLoad()
     {
         super.viewDidLoad()
@@ -22,8 +27,30 @@ class AddEditProfileViewController: UIViewController
     
     @IBAction func saveProfile()
     {
-        NotificationCenter.default.post(name: Notification.Name("save"), object: true)
+        profile.userId = UserDefaults.standard.integer(forKey: "userId")
+        profile.nickName = nickNameTextField.text!
+        profile.name = nameTextField.text!
+        profile.description = descriptionTextView.text
+        profile.date = Date.now
         
-        navigationController?.popToRootViewController(animated: true)
+        if profile.userId == -1
+            ? ProfileService.shared.addProfile(profile)
+            : ProfileService.shared.updateProfile(profile)
+        {
+            NotificationCenter.default.post(name: Notification.Name("save"), object: true)
+            
+            navigationController?.popToRootViewController(animated: true)
+        }
+        
+        
+    }
+    
+    
+    @IBAction func imageTapAction(_ sender: Any)
+    {
+        ImagePickerManager().pickImage(self){ image in
+            self.imageButton.setBackgroundImage(image, for: .normal)
+            self.profile.imagePath = ImageFileHelper().save(image: image)!
+        }
     }
 }

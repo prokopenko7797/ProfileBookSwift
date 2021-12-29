@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		CE064C8F2775FCC000591F43 /* Validator.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE064C8E2775FCC000591F43 /* Validator.swift */; };
+		CE1D4392277C6EB900CF8A9A /* ImagePickerManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE1D4391277C6EB900CF8A9A /* ImagePickerManager.swift */; };
+		CE1D4394277C7DE900CF8A9A /* ImageFileHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE1D4393277C7DE900CF8A9A /* ImageFileHelper.swift */; };
+		CE1D4397277C94BC00CF8A9A /* ProfileCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE1D4396277C94BC00CF8A9A /* ProfileCell.swift */; };
 		CE2767C32779F1E70009C45C /* LoginNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE2767C22779F1E70009C45C /* LoginNavigationController.swift */; };
 		CE2767C52779FE8F0009C45C /* AutorizedNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE2767C42779FE8F0009C45C /* AutorizedNavigationController.swift */; };
 		CE3C4DFE277A4F13009D8D0A /* MainListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE3C4DFD277A4F13009D8D0A /* MainListViewController.swift */; };
@@ -30,6 +33,9 @@
 
 /* Begin PBXFileReference section */
 		CE064C8E2775FCC000591F43 /* Validator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Validator.swift; sourceTree = "<group>"; };
+		CE1D4391277C6EB900CF8A9A /* ImagePickerManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePickerManager.swift; sourceTree = "<group>"; };
+		CE1D4393277C7DE900CF8A9A /* ImageFileHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageFileHelper.swift; sourceTree = "<group>"; };
+		CE1D4396277C94BC00CF8A9A /* ProfileCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileCell.swift; sourceTree = "<group>"; };
 		CE2767C22779F1E70009C45C /* LoginNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginNavigationController.swift; sourceTree = "<group>"; };
 		CE2767C42779FE8F0009C45C /* AutorizedNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AutorizedNavigationController.swift; sourceTree = "<group>"; };
 		CE3C4DFD277A4F13009D8D0A /* MainListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainListViewController.swift; sourceTree = "<group>"; };
@@ -67,8 +73,17 @@
 			isa = PBXGroup;
 			children = (
 				CE064C8E2775FCC000591F43 /* Validator.swift */,
+				CE1D4393277C7DE900CF8A9A /* ImageFileHelper.swift */,
 			);
 			path = Helpers;
+			sourceTree = "<group>";
+		};
+		CE1D4395277C948F00CF8A9A /* ViewCells */ = {
+			isa = PBXGroup;
+			children = (
+				CE1D4396277C94BC00CF8A9A /* ProfileCell.swift */,
+			);
+			path = ViewCells;
 			sourceTree = "<group>";
 		};
 		CE72138A27736EA700BE19B4 /* Services */ = {
@@ -77,6 +92,7 @@
 				CE72138B27736F7400BE19B4 /* UserService.swift */,
 				CE879C932773D69700A7E1B9 /* SQLManager.swift */,
 				CEE7E466277B3A1C00DA6E5D /* ProfileService.swift */,
+				CE1D4391277C6EB900CF8A9A /* ImagePickerManager.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -121,6 +137,7 @@
 		CEB91AA7276DF22F00D7ECDA /* ProfileBook */ = {
 			isa = PBXGroup;
 			children = (
+				CE1D4395277C948F00CF8A9A /* ViewCells */,
 				CE064C8D2775FB3A00591F43 /* Helpers */,
 				CE72138A27736EA700BE19B4 /* Services */,
 				CE8162EE2770C9E6001FFA07 /* Views */,
@@ -228,6 +245,7 @@
 				CEC976E22770703300F4269D /* UserModel.swift in Sources */,
 				CE064C8F2775FCC000591F43 /* Validator.swift in Sources */,
 				CE2767C32779F1E70009C45C /* LoginNavigationController.swift in Sources */,
+				CE1D4394277C7DE900CF8A9A /* ImageFileHelper.swift in Sources */,
 				CE8162ED2770C9B2001FFA07 /* SignUpViewController.swift in Sources */,
 				CEC976E92770729B00F4269D /* ProfileModel.swift in Sources */,
 				CE8162EB2770C925001FFA07 /* SignInViewController.swift in Sources */,
@@ -236,7 +254,9 @@
 				CE879C942773D69700A7E1B9 /* SQLManager.swift in Sources */,
 				CEB91AA9276DF22F00D7ECDA /* AppDelegate.swift in Sources */,
 				CEB91AAB276DF22F00D7ECDA /* SceneDelegate.swift in Sources */,
+				CE1D4397277C94BC00CF8A9A /* ProfileCell.swift in Sources */,
 				CEE7E467277B3A1C00DA6E5D /* ProfileService.swift in Sources */,
+				CE1D4392277C6EB900CF8A9A /* ImagePickerManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
