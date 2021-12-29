@@ -24,6 +24,6 @@ class ProfileCell : UITableViewCell
         }
         nickNameLabel.text = profile.nickName
         nameLabel.text = profile.name
-        dateLabel.text = DateFormatter().string(from: profile.date)
+        dateLabel.text = profile.date
     }
 }

@@ -278,7 +278,7 @@
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled" image="ic_add" cornerStyle="capsule"/>
                                 <connections>
-                                    <segue destination="RR8-wV-wc6" kind="show" id="Zko-ax-I5L"/>
+                                    <segue destination="RR8-wV-wc6" kind="show" identifier="ToAddEditProfile" id="Zko-ax-I5L"/>
                                 </connections>
                             </button>
                         </subviews>

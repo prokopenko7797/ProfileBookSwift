@@ -25,6 +25,14 @@ class MainListViewController: UIViewController
         
         tableView.delegate = self
         tableView.dataSource = self
+        
+        NotificationCenter.default.addObserver(self, selector: #selector(onGetNotification(_:)), name: Notification.Name("save"), object: nil)
+    }
+    
+    @objc func onGetNotification(_ notification: Notification)
+    {
+        profiles = ProfileService.shared.getUserProfiles(UserDefaults.standard.integer(forKey: "userId"))
+        tableView.reloadData()
     }
     
     @IBAction func logOut()
@@ -50,10 +58,47 @@ extension MainListViewController: UITableViewDataSource, UITableViewDelegate
         
         cell.setProfile(profile: profile)
         
+        cell.imageButton.tag = indexPath.row
+        
+        cell.imageButton.addTarget(self, action: #selector(buttonAction(sender:)), for: .touchUpInside)
+        
         return cell
+    }
+    
+    @objc func buttonAction(sender: UIButton) {
+        let newImageView = UIImageView(image: sender.backgroundImage(for: .normal))
+        newImageView.frame = UIScreen.main.bounds
+        newImageView.backgroundColor = .black
+        newImageView.contentMode = .scaleAspectFit
+        newImageView.isUserInteractionEnabled = true
+        let tap = UITapGestureRecognizer(target: self, action: #selector(dismissFullscreenImage(sender:)))
+        newImageView.addGestureRecognizer(tap)
+        self.view.addSubview(newImageView)
+        self.navigationController?.isNavigationBarHidden = true
+        self.tabBarController?.tabBar.isHidden = true
+    }
+
+    @objc func dismissFullscreenImage(sender: UITapGestureRecognizer) {
+        self.navigationController?.isNavigationBarHidden = false
+        self.tabBarController?.tabBar.isHidden = false
+        sender.view?.removeFromSuperview()
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return profiles.count
     }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+        let addEditVC = self.storyboard?.instantiateViewController(withIdentifier: "AddEditProfileViewController") as! AddEditProfileViewController
+        
+        let profile = profiles[indexPath.row]
+        
+        addEditVC.profile = profile
+        addEditVC.modalPresentationStyle = .fullScreen
+        
+        self.show(addEditVC, sender: nil)
+        
+    }
+    
 }

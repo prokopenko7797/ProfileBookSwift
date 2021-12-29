@@ -23,6 +23,16 @@ class AddEditProfileViewController: UIViewController
         super.viewDidLoad()
         
         self.navigationItem.rightBarButtonItem = UIBarButtonItem(image: UIImage(named: "ic_save"), style: .done, target: self, action: #selector(saveProfile))
+        
+        let image = ImageFileHelper().load(fileName: profile.imagePath)
+        if image != nil
+        {
+            imageButton.setBackgroundImage(image, for: .normal)
+        }
+        
+        nickNameTextField.text = profile.nickName
+        nameTextField.text = profile.name
+        descriptionTextView.text = profile.description
     }
     
     @IBAction func saveProfile()
@@ -31,9 +41,13 @@ class AddEditProfileViewController: UIViewController
         profile.nickName = nickNameTextField.text!
         profile.name = nameTextField.text!
         profile.description = descriptionTextView.text
-        profile.date = Date.now
         
-        if profile.userId == -1
+        let dateFormat = DateFormatter()
+        dateFormat.dateFormat = "yyyy-MM-dd'T'HH:mm"
+        
+        profile.date = dateFormat.string(from: Date.now)
+        
+        if profile.id == -1
             ? ProfileService.shared.addProfile(profile)
             : ProfileService.shared.updateProfile(profile)
         {
@@ -41,10 +55,7 @@ class AddEditProfileViewController: UIViewController
             
             navigationController?.popToRootViewController(animated: true)
         }
-        
-        
     }
-    
     
     @IBAction func imageTapAction(_ sender: Any)
     {

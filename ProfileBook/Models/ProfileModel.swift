@@ -14,14 +14,14 @@ struct ProfileModel {
     var description: String = ""
     var imagePath: String = ""
     var userId: Int = -1
-    var date: Date = Date.now
+    var date: String = ""
     
     init()
     {
         
     }
     
-    init(_ id: Int, _ nickName: String, _ name: String, _ description: String, _ imagePath: String, _ userId: Int, _ date: Date){
+    init(_ id: Int, _ nickName: String, _ name: String, _ description: String, _ imagePath: String, _ userId: Int, _ date: String){
      
         self.id = id
         self.nickName = nickName

@@ -20,7 +20,7 @@ class ProfileService {
     fileprivate let descriptionExp = Expression<String>("description")
     fileprivate let imagePathExp = Expression<String>("imagePath")
     fileprivate let userIdExp = Expression<Int>("userId")
-    fileprivate let dateExp = Expression<Date>("date")
+    fileprivate let dateExp = Expression<String>("date")
     
     private let profiles = Table("profiles")
     
@@ -73,7 +73,9 @@ class ProfileService {
         
         do
         {
-            try SQLManager.shared.db.run(profiles.update(idExp <- profile.userId, nickNameExp <- profile.nickName, nameExp <- profile.name, descriptionExp <- profile.description, imagePathExp <- profile.imagePath, userIdExp <- profile.userId, dateExp <- profile.date))
+            let filter = profiles.filter(idExp == profile.id)
+            
+            try SQLManager.shared.db.run(filter.update( userIdExp <- profile.userId, nickNameExp <- profile.nickName, nameExp <- profile.name, descriptionExp <- profile.description, imagePathExp <- profile.imagePath, userIdExp <- profile.userId, dateExp <- profile.date))
             
             result = true
         }
