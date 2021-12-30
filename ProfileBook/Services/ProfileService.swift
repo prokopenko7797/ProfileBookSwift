@@ -87,6 +87,28 @@ class ProfileService {
         return result
     }
     
+    func deleteProfile(_ profileId: Int) -> Bool {
+        
+        createProfileTable()
+        
+        var result = false
+        
+        do
+        {
+            let filter = profiles.filter(idExp == profileId)
+            
+            try SQLManager.shared.db.run(filter.delete())
+            
+            result = true
+        }
+        catch
+        {
+            print((error.localizedDescription))
+        }
+        
+        return result
+    }
+    
     func getUserProfiles(_ userId: Int) -> [ProfileModel] {
         
         createProfileTable()
@@ -94,13 +116,11 @@ class ProfileService {
         var result = [ProfileModel]()
         
         do {
+            let filter = profiles.filter(userIdExp == userId)
             
-            for profile in try SQLManager.shared.db.prepare(profiles)
+            for profile in try SQLManager.shared.db.prepare(filter)
             {
-                if profile[userIdExp] == userId
-                {
-                    result.append(ProfileModel(profile[idExp], profile[nickNameExp], profile[nameExp], profile[descriptionExp], profile[imagePathExp], profile[userIdExp], profile[dateExp]))
-                }
+                result.append(ProfileModel(profile[idExp], profile[nickNameExp], profile[nameExp], profile[descriptionExp], profile[imagePathExp], profile[userIdExp], profile[dateExp]))
             }
         }
         catch {

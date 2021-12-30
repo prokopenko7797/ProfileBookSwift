@@ -88,17 +88,32 @@ extension MainListViewController: UITableViewDataSource, UITableViewDelegate
         return profiles.count
     }
     
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        
-        let addEditVC = self.storyboard?.instantiateViewController(withIdentifier: "AddEditProfileViewController") as! AddEditProfileViewController
-        
-        let profile = profiles[indexPath.row]
-        
-        addEditVC.profile = profile
-        addEditVC.modalPresentationStyle = .fullScreen
-        
-        self.show(addEditVC, sender: nil)
-        
-    }
     
+    func tableView(_ tableView: UITableView, contextMenuConfigurationForRowAt indexPath: IndexPath, point: CGPoint) -> UIContextMenuConfiguration? {
+        let actionProvider: UIContextMenuActionProvider = { _ in
+                
+                return UIMenu(title: "Title", children: [
+                    UIAction(title: "Edit") { _ in
+                        let addEditVC = self.storyboard?.instantiateViewController(withIdentifier: "AddEditProfileViewController") as! AddEditProfileViewController
+                        
+                        let profile = self.profiles[indexPath.row]
+                        
+                        addEditVC.profile = profile
+                        addEditVC.modalPresentationStyle = .fullScreen
+                        
+                        self.show(addEditVC, sender: nil)
+                    },
+                    UIAction(title: "Delete") { _ in
+                        let cell = tableView.cellForRow(at: indexPath) as! ProfileCell
+                        
+                        if ProfileService.shared.deleteProfile(cell.id)
+                        {
+                            self.tableView.deleteRows(at: [indexPath], with: .automatic)
+                        }
+                    },
+                ])
+            }
+
+            return UIContextMenuConfiguration(identifier: "unique-ID" as NSCopying, previewProvider: nil, actionProvider: actionProvider)
+      }
 }

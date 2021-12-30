@@ -10,6 +10,8 @@ import UIKit
 
 class ProfileCell : UITableViewCell
 {
+    var id : Int = -1
+    
     @IBOutlet weak var dateLabel: UILabel!
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var nickNameLabel: UILabel!
@@ -17,6 +19,8 @@ class ProfileCell : UITableViewCell
     
     func setProfile(profile: ProfileModel)
     {
+        id = profile.id
+        
         let image = ImageFileHelper().load(fileName: profile.imagePath)
         if image != nil
         {
