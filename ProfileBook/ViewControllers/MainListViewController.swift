@@ -103,12 +103,13 @@ extension MainListViewController: UITableViewDataSource, UITableViewDelegate
                         
                         self.show(addEditVC, sender: nil)
                     },
-                    UIAction(title: "Delete") { _ in
+                    UIAction(title: "Delete") { [self] _ in
                         let cell = tableView.cellForRow(at: indexPath) as! ProfileCell
                         
                         if ProfileService.shared.deleteProfile(cell.id)
                         {
-                            self.tableView.deleteRows(at: [indexPath], with: .automatic)
+                            self.profiles = ProfileService.shared.getUserProfiles(UserDefaults.standard.integer(forKey: "userId"))
+                            tableView.reloadData()
                         }
                     },
                 ])
